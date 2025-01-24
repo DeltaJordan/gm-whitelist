@@ -1,6 +1,6 @@
 local CATEGORY_NAME = "Utility"
 local function addToWhitelist(calling_ply, steamID64)
-	local whitelistTable = util.JSONToTable(file.Read("whitelist.json", true) or "{}")
+	local whitelistTable = util.JSONToTable(file.Read("whitelist.json", true) or "{}", false, true)
 	whitelistTable[steamID64] = true
 	file.Write("whitelist.json", util.TableToJSON(whitelistTable, true))
 	ULib.tsay(calling_ply, "Updated the whitelist to include" .. steamID64 .. ".")
