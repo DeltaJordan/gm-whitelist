@@ -8,7 +8,7 @@ end
 
 local whitelistcmd = ulx.command(CATEGORY_NAME, "ulx whitelist", addToWhitelist, "!whitelist")
 whitelistcmd:addParam{
-	type = ULib.cmds.NumArg,
+	type = ULib.cmds.StringArg,
 	usage = "The player's SteamID64"
 }
 
